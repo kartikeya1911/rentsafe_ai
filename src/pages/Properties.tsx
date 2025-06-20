@@ -83,7 +83,7 @@ const Properties: React.FC = () => {
 
       if (sortBy) queryParams.append('sort', sortBy);
 
-      const response = await axios.get(`http://localhost:5000/api/properties?${queryParams}`);
+      const response = await axios.get(`http://localhost:5050/api/properties?${queryParams}`);
       setProperties(response.data.properties);
     } catch (error) {
       console.error('Error fetching properties:', error);
